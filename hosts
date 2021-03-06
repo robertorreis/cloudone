@@ -5,7 +5,7 @@
 ##############################################################
 
 #KEY DE ACESSO PARA A CONSOLE SAAS DEEP SECURITY#
-key = "3E39AE8F-94E2-3FCA-5EE8-57A27CB82046:0A87EB70-7454-8DB4-104A-07471F6ACA8E:qevIVYFLzJagpu3Kc7aEzx523NiI85P6Eshh5YqOjdQ="
+key = ""
 
 #VERSÃO UTILIZADA PARA COMUNICAÇÃO REST API#
 version = 'v1'
@@ -26,17 +26,17 @@ result_adminlist = "{{ data.json | json_query('administrators[*].username') }}"
 #########################################
 
 #INFORMAÇÃO SOBRE O USER ADMIN QUE DESEJA PROCURAR#
-user= jpreviero@f9c.com.br
+user= 
 
 ##############################################
 ######Create User Administrator Variable######
 ##############################################
 
 #INFORMAÇÃO QUE DEVEM SER PREENCHIDAS PARA CRIAÇÃO DE USER ADMIN#
-nome= Julio Cesar
-usuario= jpreviero@f9c.com.br 
-senha= q1w2e3R$
-email= "jpreviero@f9c.com.br"
+nome= 
+usuario=  
+senha= 
+email= 
 
 ##############################################
 ######Delete User Administrator Variable######
