@@ -1,0 +1,32 @@
+---
+##################################################
+##########SEARCH USER ADMIN OF DEEP SECURITY########
+#################################################
+  - name: Import Var File
+    include_vars:
+      file: adminsearch.yml
+
+  - name: Deep Security Autentication Manager and Search User Administrator
+    uri:
+      url: "{{ list_url }}"
+      method: POST
+      headers:
+        Content-Type: application/json
+        api-secret-key: "{{ list_key }}"
+        api-version: "{{ list_version }}"
+      timeout: 120
+      body:
+        searchCriteria:
+          fieldName: "username"
+          stringTest: "equal"
+          stringValue: "{{ user_information }}"
+      body_format: json
+      return_content: yes
+    register: data
+
+  - name: Administrator Print Information 
+    debug:
+      msg: "{{ list_return }}"
+
+
+

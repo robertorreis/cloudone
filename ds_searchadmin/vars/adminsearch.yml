@@ -1,0 +1,10 @@
+---
+list_url: "https://cloudone.trendmicro.com/api/administrators/search"
+
+list_return: "{{ data.json }}"
+
+list_key: "{{ key }}"
+
+list_version: "{{ version }}"
+
+user_information: "{{ user }}"

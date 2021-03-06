@@ -1,0 +1,24 @@
+---
+##################################################
+##########LIST USER ADMIN OF DEEP SECURITY########
+#################################################
+  - name: Import Var File
+    include_vars:
+      file: adminlist.yml
+
+  - name: Deep Security Autentication Manager and GET List of User Administrator 
+    uri:
+      url: "{{ list_url }}"
+      method: GET
+      headers:
+        Content-Type: application/json
+        api-secret-key: "{{ list_key }}"
+        api-version: "{{ list_version }}"
+      timeout: 120
+      return_content: yes
+    register: data
+
+  - name: User Administrator List
+    debug:
+      msg: "{{ list_return }}"
+

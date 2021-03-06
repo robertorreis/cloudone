@@ -1,0 +1,20 @@
+---
+##################################################
+##########DELETE USER ADMIN OF DEEP SECURITY######
+#################################################
+  - name: Import Var File
+    include_vars:
+      file: deleteadmin.yml
+
+  - name: Deep Security Autentication Manager and DELETE User Administrator
+    uri:
+      url: "{{ list_url }}"
+      method: DELETE
+      status_code: 204
+      headers:
+        Content-Type: application/json
+        api-secret-key: "{{ list_key }}"
+        api-version: "{{ list_version }}"
+      timeout: 120
+      
+

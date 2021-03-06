@@ -1,0 +1,13 @@
+list_url: "https://cloudone.trendmicro.com/api/administrators"
+
+list_version: "{{ version }}"
+
+list_key: "{{ key }}"
+
+u_name: "{{ usuario }}"
+
+pass: "{{ senha }}"
+
+email_add: "{{ email }}"
+
+f_name: "{{ nome }}"

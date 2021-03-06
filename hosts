@@ -1,0 +1,46 @@
+[all:vars]
+
+##############################################################
+##################### AUTHENTICATION #########################
+##############################################################
+
+#KEY DE ACESSO PARA A CONSOLE SAAS DEEP SECURITY#
+key = "3E39AE8F-94E2-3FCA-5EE8-57A27CB82046:0A87EB70-7454-8DB4-104A-07471F6ACA8E:qevIVYFLzJagpu3Kc7aEzx523NiI85P6Eshh5YqOjdQ="
+
+#VERSÃO UTILIZADA PARA COMUNICAÇÃO REST API#
+version = 'v1'
+
+##############################################################
+##################### ADMINISTRATION #########################
+##############################################################
+
+########################################
+######List Administrator Variable#######
+########################################
+
+#VARIAVÉL PARA FILTRO DA INFORMAÇÃO DESEJA DO ADMIN, NESTA VARIAVEL ESTAMOS FILTRANDO APENAS O NOME DOS USUARIOS, É POSSIVEL PEGAR A LISTA POR INTEIRO#
+result_adminlist = "{{ data.json | json_query('administrators[*].username') }}"
+
+#########################################
+######Search Administrator Variable######
+#########################################
+
+#INFORMAÇÃO SOBRE O USER ADMIN QUE DESEJA PROCURAR#
+user= jpreviero@f9c.com.br
+
+##############################################
+######Create User Administrator Variable######
+##############################################
+
+#INFORMAÇÃO QUE DEVEM SER PREENCHIDAS PARA CRIAÇÃO DE USER ADMIN#
+nome= Julio Cesar
+usuario= jpreviero@f9c.com.br 
+senha= q1w2e3R$
+email= "jpreviero@f9c.com.br"
+
+##############################################
+######Delete User Administrator Variable######
+##############################################
+
+#O FINAL DA URL DEVE SER PREENCHIDO COM O ID DO USER ADMIN QUE PODE SER ENCONTRADO COM A EXECUÇÃO DO PLAYBOOK SEARCH ADMINNISTRATOR#
+delete_url= "https://cloudone.trendmicro.com/api/administrators/136"

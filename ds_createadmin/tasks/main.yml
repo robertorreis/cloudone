@@ -1,0 +1,29 @@
+---
+##################################################
+##########CREATE USER ADMIN DEEP SECURITY########
+#################################################
+  - name: Import Var File
+    include_vars:
+      file: createadmin.yml
+
+  - name: Deep Security Autentication Manager and POST Information to Create User Administrator
+    uri:
+      url: "{{ list_url }}"
+      method: POST 
+      headers:
+        Content-Type: application/json
+        api-secret-key: "{{ list_key }}"
+        api-version: "{{ list_version }}"
+      timeout: 120
+      body:
+        fullName: "{{ f_name }}"
+        username: "{{ u_name }}"
+        password: "{{ pass }}"
+        roleID: 1
+        locale: en-US
+        active: true
+        emailAddress: "{{ email_add }}"
+        timeZone: America/Sao_Paulo
+      body_format: json
+
+  

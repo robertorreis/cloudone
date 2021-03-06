@@ -1,0 +1,7 @@
+---
+list_url: "{{ delete_url }}"
+
+list_key: "{{ key }}"
+
+list_version: "{{ version }}"
+
